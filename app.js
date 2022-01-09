@@ -30,9 +30,10 @@ function init() {
       
       // Use first sample to build metadata and initial plots
        buildMetadata(filteredData[0]);
-
+       //<img src="pic_trulli.jpg" alt="Italian Trulli">
 
     }
+    
 
   function optionChanged(newSelection) {
 
