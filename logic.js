@@ -21,9 +21,44 @@ function createFeatures(earthquakeData) {
     onEachFeature: onEachFeature
   });
 
-  // Send our earthquakes layer to the createMap function/
+  // Send our crime data layer to the createMap function/
   createMap(earthquakes);
-}
+  //createMap(crimeData);
+  var filteredData = ['2004','2005','2006','2007','2008','2009', '2010','2011','2012','2013','2014'];
+  var dropdownMenu =document.getElementById("selDataset");
+    // populating the dropdown with the values
+    for(var i=0;i<filteredData.length;i++)
+      {
+        var opt = document.createElement('option');
+        opt.innerHTML = filteredData[i];
+        opt.value = filteredData[i];
+        dropdownMenu.appendChild(opt);
+          
+          
+      }
+  //Crime Drop Down
+      var crimeData = ['murder','rape', 'robbery', 'aggravated assault', 'all violent crimes', 'burglary', 'larceny theft', 'vehicle theft', 'all property crimes'];
+      var crimedropdown = document.getElementById("crimeDataset");
+      // populating the dropdown with the values
+      for(var i=0;i<crimeData.length;i++)
+      {
+          var opt = document.createElement('option');
+          opt.innerHTML = crimeData[i];
+          opt.value = crimeData[i];
+          crimedropdown.appendChild(opt);
+          
+          
+      }
+      
+      // Use first sample to build metadata and initial plots
+       buildMetadata(filteredData[0]);
+       //<img src="pic_trulli.jpg" alt="Italian Trulli">
+
+    }
+    
+
+  //function optionChanged(newSelection)
+
 
 function createMap(earthquakes) {
 
@@ -38,13 +73,13 @@ function createMap(earthquakes) {
 
   // Create a baseMaps object.
   var baseMaps = {
-    "Street Map": street,
-    "Topographic Map": topo
+    //"Street Map": street,
+    //"Topographic Map": topo,
   };
 
   // Create an overlay object to hold our overlay.
   var overlayMaps = {
-    Earthquakes: earthquakes
+    //Earthquakes: earthquakes
   };
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load.
@@ -53,7 +88,7 @@ function createMap(earthquakes) {
       37.09, -95.71
     ],
     zoom: 5,
-    layers: [street, earthquakes]
+    layers: [street, ]
   });
 
   // Create a layer control.
