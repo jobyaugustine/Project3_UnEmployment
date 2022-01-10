@@ -23,18 +23,20 @@
         <!-- Creating the year and crime drop downs-->
         <div class="well">
           <h5>Year:</h5> <!-- YEAR-->
-          <!--<select id="selDataset" onchange="optionChanged(this.value)"></select> -->
-          <select id="selDataset"></select>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select> 
+          <!--<select id="selDataset"></select> -->
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">UnEmployment and Crime Details:</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
-        </div>
+        
       </div>
       <div class="col-md-5">
-        <div id="bar"></div>
+        <!--<div id="bar"></div>  -->
+        <div class="panel panel-primary">  
+          <div class="panel-heading">
+            <h3 class="panel-title panel-default">10 States with Highest UnEmployment and Crime Rate:</h3>
+          </div>
+          <!--<div id="sample-metadata" class="panel-body"></div>-->
+          <ul id="myList"></ul> 
+        </div>
       </div>
       <div class="col-md-5">
         <div id="gauge"></div>
@@ -52,7 +54,13 @@
 
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>   
-  <!-- <script src="./static/js/app.js"></script> -->
+  <div id="plot"></div>
+  <div id="plot1"></div> 
+  <div id="plot11"></div> 
+  <div id="bar"></div>
+  <div id="bar2"></div>
+  <script src="data_var.js"></script> 
+  <script src="UnEmp10_var.js"></script>  
   <script src="app.js"></script>   
 
   
