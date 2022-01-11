@@ -42,14 +42,12 @@ function buildCharts(selection) {
 
       var barChartData = [barChartTrace];
 
-      var layout = {
-                  xaxis: {
-                      title: "UnEmployment Rate"
-                  }
-              };
+      var layout = {xaxis: {
+                      title: "UnEmployment Rate-->" },title:"Ten States with highest Unemployment Rates for the Year selected "
+                };
 
       Plotly.newPlot("bar", barChartData,layout);
-    });
+});
 
     ///------------------------
 
@@ -92,7 +90,7 @@ function buildCharts(selection) {
   
         var barChartData = [barChartTrace];
         var layout = {
-                    xaxis: {title: "Crime Rate"}
+                    xaxis: {title: "Crime Rate"},title:"Ten States with highest Crime Rates for the Year selected "
                 };
         Plotly.newPlot("bar2", barChartData,layout);
       });
@@ -145,13 +143,13 @@ let list = document.getElementById("myList");
     if (i==0)
      li.innerText = "";
       
-     li.innerText = li.innerText + "State: "+  State10Array[i] + "   " + "UnEmployment: " + Unemp10Array[i] 
+     li.innerText = li.innerText +  State10Array[i] + "   " + " with UnEmployment: " + Unemp10Array[i] 
       list.appendChild(li);
   }
 }
 else 
    {console.log("clearinginnerHTML");
-   document.getElementById("myList").innerHTML = "";}
+   document.getElementById("myList").innerHTML = "Unemployment declined from 2010 to 2019. A trend of decreasing unemployment followed after a high in 2010 resulting from the 2008 financial crisis. It rose again to 8.1 percent in 2020.";}
 
  }
 
@@ -176,12 +174,10 @@ function funcForYearlyUnempMax(tempyear2)
 
 function funcForYearlyCrimeMax(tempyear2)
 {
-  
   var tempCrimemax = 0
 
   for (let i = 0; i <data_var.length; i++) 
-  {
-  row = data_var[i];
+  {row = data_var[i];
   if (row.Year ==tempyear2)
     {
       if (row.Total_CrimeRate > tempCrimemax)
@@ -294,7 +290,7 @@ var layout = {
 // Render the plot to the div tag with id "plot"
 Plotly.newPlot("plot", data, layout);
 
-document.getElementById("myList").innerHTML = "";
+document.getElementById("myList").innerHTML = "Unemployment declined from 2010 to 2019. A trend of decreasing unemployment followed after a high in 2010 resulting from the 2008 financial crisis. It rose again to 8.1 percent in 2020.";
 let list = document.getElementById("myList");
 }
 
