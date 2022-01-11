@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bellybutton Biodiversity</title>
+  <title>U.S.Unemployment Rate and Crime Rate </title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -14,41 +14,54 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
-        <h1>U.S. Unemployment and Crime Rate Analysis</h1>
+        <img src="usmap.jpeg" alt="Italian Trulli"> 
+        <h2>U.S. Unemployment and Crime Rate Analysis</h2>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-4">
         <!-- Creating the year and crime drop downs-->
         <div class="well">
           <h5>Year:</h5> <!-- YEAR-->
           <select id="selDataset" onchange="optionChanged(this.value)"></select> 
           <!--<select id="selDataset"></select> -->
+          
         </div>
+        <div class="well">
+          <h5>U.S Map for the year selected:</h5> <!-- YEAR-->
+          <button type="button" onclick="getmapdata()">Click for the Map</button>
+          <!--<button type="button" class="btn btn-primary col-sm-0" onclick="getmapdata()" style="margin-top:50px;">Click for the Map</button>  -->
+         
+          
+        </div>
+       
         
       </div>
       <div class="col-md-5">
-        <!--<div id="bar"></div>  -->
+        
         <div class="panel panel-primary">  
           <div class="panel-heading">
-            <h3 class="panel-title panel-default">10 States with Highest UnEmployment and Crime Rate:</h3>
+            <h3 class="panel-title panel-default">Trends and Details of Unemployment / 10 States with Highest UnEmployment rate:</h3>
           </div>
-          <!--<div id="sample-metadata" class="panel-body"></div>-->
+          
           <ul id="myList"></ul> 
+          
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-3">
+        
         <div id="gauge"></div>
+        <!--<img src="usmap.jpeg" alt="Italian Trulli">  -->
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <div id="bubble"></div>
+        
       </div>
     </div>
 
-   
+    
   </div>
 
 
@@ -59,6 +72,7 @@
   <div id="plot11"></div> 
   <div id="bar"></div>
   <div id="bar2"></div>
+  <div id="myDiv"></div>
   <script src="data_var.js"></script> 
   <script src="UnEmp10_var.js"></script>  
   <script src="app.js"></script>   
